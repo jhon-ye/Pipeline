@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.alipay.sofa</groupId>
+        <artifactId>sofaboot-dependencies</artifactId>
+        <version>3.12.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.opencn.mesh</groupId>
+    <artifactId>pipeline-all</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>pipeline-bom</module>
+        <module>pipeline-project</module>
+        <module>pipeline-model</module>
+        <module>pipeline-service</module>
+    </modules>
+
+    <packaging>pom</packaging>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus.releases</id>
+            <url>http://nexus.hgj.net/repository/releases/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </repository>
+        <snapshotRepository>
+            <id>nexus.snapshots</id>
+            <url>http://nexus.hgj.net/repository/snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
