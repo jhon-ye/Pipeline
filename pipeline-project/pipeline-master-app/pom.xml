@@ -34,6 +34,11 @@
 <!--            <artifactId>dashboard-client-sofa-boot-starter</artifactId>-->
 <!--        </dependency>-->
 
+<!--        <dependency>-->
+<!--            <groupId>com.alipay.sofa</groupId>-->
+<!--            <artifactId>dashboard-ext-redis-store</artifactId>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
