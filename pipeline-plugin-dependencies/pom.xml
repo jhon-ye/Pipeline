@@ -3,10 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>pipeline-bom</artifactId>
+        <artifactId>pipeline-all</artifactId>
         <groupId>com.opencn.mesh</groupId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../pipeline-bom</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -17,6 +16,11 @@
 
     <properties>
         <sofaboot.version>3.12.0-SNAPSHOT</sofaboot.version>
+        <mybatis.version>2.2.0</mybatis.version>
+        <rocketmq.starter.version>2.2.0</rocketmq.starter.version>
+        <redission.strater.version>3.17.0</redission.strater.version>
+        <common.service.version>1.0.0-SNAPSHOT</common.service.version>
+        <common.model.version>1.0.0-SNAPSHOT</common.model.version>
     </properties>
 
     <dependencyManagement>
@@ -50,6 +54,17 @@
                 <version>${redission.strater.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.opencn.mesh</groupId>
+                <artifactId>common-model</artifactId>
+                <version>${common.model.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.opencn.mesh</groupId>
+                <artifactId>common-service</artifactId>
+                <version>${common.service.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

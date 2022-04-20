@@ -19,6 +19,8 @@
     <properties>
         <revision>1.0.0-SNAPSHOT</revision>
         <pipeline.version>${revision}</pipeline.version>
+        <common.service.version>1.0.0-SNAPSHOT</common.service.version>
+        <common.model.version>1.0.0-SNAPSHOT</common.model.version>
     </properties>
 
     <modules>

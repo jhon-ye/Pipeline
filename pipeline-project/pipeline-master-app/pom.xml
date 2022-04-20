@@ -19,6 +19,13 @@
     <dependencies>
 
         <!-- Pipeline master biz dependency   -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-loader</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>healthcheck-sofa-boot-starter</artifactId>
