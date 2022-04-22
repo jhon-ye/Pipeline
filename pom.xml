@@ -29,6 +29,7 @@
         <module>pipeline-model</module>
         <module>pipeline-service</module>
         <module>pipeline-plugin-dependencies</module>
+        <module>pipeline-common</module>
     </modules>
 
     <distributionManagement>
