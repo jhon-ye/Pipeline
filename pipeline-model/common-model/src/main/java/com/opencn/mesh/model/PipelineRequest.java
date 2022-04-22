@@ -1,0 +1,1 @@
+package com.opencn.mesh.model;import lombok.Getter;import lombok.Setter;import java.io.Serializable;@Getter@Setterpublic class PipelineRequest implements Serializable {    private String bizKey;    private Object bizData;}

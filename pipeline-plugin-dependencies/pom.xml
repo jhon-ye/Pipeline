@@ -21,6 +21,7 @@
         <redission.strater.version>3.17.0</redission.strater.version>
         <common.service.version>1.0.0-SNAPSHOT</common.service.version>
         <common.model.version>1.0.0-SNAPSHOT</common.model.version>
+        <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
     </properties>
 
     <dependencyManagement>
@@ -55,6 +56,12 @@
             </dependency>
 
             <dependency>
+                <groupId>net.devh</groupId>
+                <artifactId>grpc-server-spring-boot-starter</artifactId>
+                <version>${grpc.starter.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.opencn.mesh</groupId>
                 <artifactId>common-model</artifactId>
                 <version>${common.model.version}</version>
@@ -65,6 +72,7 @@
                 <artifactId>common-service</artifactId>
                 <version>${common.service.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

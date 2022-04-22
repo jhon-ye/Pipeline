@@ -1,0 +1,1 @@
+package com.opencn.mesh.model;import java.io.Serializable;public class PipelineResponse implements Serializable {    private int code;    private Object data;}
