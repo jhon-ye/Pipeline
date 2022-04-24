@@ -17,11 +17,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.opencn.mesh</groupId>
-            <artifactId>common-service-grpc</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.opencn.mesh</groupId>-->
+<!--            <artifactId>common-service-grpc</artifactId>-->
+<!--            <version>1.0.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
 <!--        <dependency>-->
 <!--            <groupId>io.grpc</groupId>-->
@@ -29,16 +29,16 @@
 <!--        </dependency>-->
 
         <!-- For the server (only) -->
-        <dependency>
-            <groupId>net.devh</groupId>
-            <artifactId>grpc-server-spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.grpc</groupId>
-                    <artifactId>grpc-netty-shaded</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.devh</groupId>-->
+<!--            <artifactId>grpc-server-spring-boot-starter</artifactId>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>io.grpc</groupId>-->
+<!--                    <artifactId>grpc-netty-shaded</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
     </dependencies>
 
 
