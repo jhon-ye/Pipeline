@@ -13,7 +13,7 @@
     <artifactId>common-service-grpc</artifactId>
 
 
-    
+
 
     <properties>
         <protoc.version>3.11.0</protoc.version>
