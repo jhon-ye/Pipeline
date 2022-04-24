@@ -1,1 +1,62 @@
-variables:  HARBOR: "harbor.hgj.net/next-yunlsp"  TENCENTYUN: "ccr.ccs.tencentyun.com/next-yunlsp"stages:  - deploydeploy-dev:  stage: deploy  environment:    name: dev  script:    - mvn clean -U install -Dmaven.test.skip=true    - docker build -t $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .    - docker push $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}  tags:    - shell  when: manual  only:    - /^feature.*$/    - /^bugfix.*$/    - /^dev.*$/deploy-beta:  stage: deploy  environment:    name: dev  script:    - mvn clean -U install -Dmaven.test.skip=true    - docker build -t $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .    - docker push $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}  tags:    - shell  when: manual  only:    - /^feature.*$/    - /^bugfix.*$/    - /^dev.*$/deploy-uat:  stage: deploy  environment:    name: uat  script:    - mvn clean -U install -Dmaven.test.skip=true    - docker build -t ccr.ccs.tencentyun.com/uat-next-yunlsp/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .    - docker push ccr.ccs.tencentyun.com/uat-next-yunlsp/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}  tags:    - txshell  when: manual  only:    - /^feature.*$/    - /^bugfix.*$/    - /^dev.*$/deploy-prod:  stage: deploy  script:    - mvn clean -U install -Dmaven.test.skip=true    - docker build -t $TENCENTYUN/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .    - docker push $TENCENTYUN/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}  tags:    - txshell  when: manual  only:    - /^release.*$/    - /^hotfix.*$/
+variables:
+  HARBOR: "harbor.hgj.net/next-yunlsp"
+  TENCENTYUN: "ccr.ccs.tencentyun.com/next-yunlsp"
+stages:
+  - deploy
+deploy-dev:
+  stage: deploy
+  environment:
+    name: dev
+  script:
+    - mvn clean -U package -Dmaven.test.skip=true
+    - docker build -t $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
+    - docker push $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
+  tags:
+    - shell
+  when: manual
+  only:
+    - /^feature.*$/
+    - /^bugfix.*$/
+    - /^dev.*$/
+deploy-beta:
+  stage: deploy
+  environment:
+    name: dev
+  script:
+    - mvn clean -U package -Dmaven.test.skip=true
+    - docker build -t $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
+    - docker push $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
+  tags:
+    - shell
+  when: manual
+  only:
+    - /^feature.*$/
+    - /^bugfix.*$/
+    - /^dev.*$/
+deploy-uat:
+  stage: deploy
+  environment:
+    name: uat
+  script:
+    - mvn clean -U package -Dmaven.test.skip=true
+    - docker build -t ccr.ccs.tencentyun.com/uat-next-yunlsp/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
+    - docker push ccr.ccs.tencentyun.com/uat-next-yunlsp/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
+  tags:
+    - txshell
+  when: manual
+  only:
+    - /^feature.*$/
+    - /^bugfix.*$/
+    - /^dev.*$/
+deploy-prod:
+  stage: deploy
+  script:
+    - mvn clean -U package -Dmaven.test.skip=true
+    - docker build -t $TENCENTYUN/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
+    - docker push $TENCENTYUN/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
+  tags:
+    - txshell
+  when: manual
+  only:
+    - /^release.*$/
+    - /^hotfix.*$/
