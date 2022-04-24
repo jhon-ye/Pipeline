@@ -200,6 +200,7 @@
     </dependencies>
 
     <build>
+        <finalName>pipeline-master-app</finalName>
         <plugins>
             <!-- 这里配置动态模块打包插件 -->
 <!--            <plugin>-->
