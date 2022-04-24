@@ -16,7 +16,6 @@
 
     <modules>
         <module>pipeline-master-app</module>
-        <module>pipeline-grpc-server</module>
     </modules>
 
 </project>
