@@ -12,6 +12,9 @@
 
     <artifactId>common-service-grpc</artifactId>
 
+
+    
+
     <properties>
         <protoc.version>3.11.0</protoc.version>
         <protoc-gen-grpc-java.version>1.17.0</protoc-gen-grpc-java.version>
