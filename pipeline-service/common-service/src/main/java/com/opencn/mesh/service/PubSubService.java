@@ -1,0 +1,1 @@
+package com.opencn.mesh.service;@FunctionalInterfacepublic interface PubSubService {    Object sub(Object request);}

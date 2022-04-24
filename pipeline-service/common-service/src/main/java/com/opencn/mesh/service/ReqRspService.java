@@ -1,0 +1,1 @@
+package com.opencn.mesh.service;@FunctionalInterfacepublic interface ReqRspService {    Object req(Object request);}

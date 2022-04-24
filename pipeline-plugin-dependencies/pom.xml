@@ -21,6 +21,7 @@
         <redission.strater.version>3.17.0</redission.strater.version>
         <common.service.version>1.0.0-SNAPSHOT</common.service.version>
         <common.model.version>1.0.0-SNAPSHOT</common.model.version>
+        <pipeline.bizmapping.version>1.0.0-SNAPSHOT</pipeline.bizmapping.version>
         <pipeline.common.version>1.0.0-SNAPSHOT</pipeline.common.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
     </properties>
