@@ -1,1 +1,1 @@
-package com.opencn.mesh.model;import java.io.Serializable;public class PipelineResponse implements Serializable {    private int code;    private Object data;}
+package com.opencn.mesh.model;import lombok.Builder;import lombok.Getter;import lombok.Setter;import java.io.Serializable;@Builder@Setter@Getterpublic class PipelineResponse implements Serializable {    private int code;    private Object data;}

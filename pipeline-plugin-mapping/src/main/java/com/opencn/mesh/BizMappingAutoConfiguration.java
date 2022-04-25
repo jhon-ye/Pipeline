@@ -1,0 +1,1 @@
+package com.opencn.mesh;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;@Configurationpublic class BizMappingAutoConfiguration {    @Bean    public static BizMappingBeanPostProcessor bizMappingPostProcessor() {        return new BizMappingBeanPostProcessor();    }}

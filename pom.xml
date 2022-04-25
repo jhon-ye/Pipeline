@@ -30,6 +30,7 @@
         <module>pipeline-service</module>
         <module>pipeline-plugin-dependencies</module>
         <module>pipeline-common</module>
+        <module>pipeline-plugin-mapping</module>
     </modules>
 
     <distributionManagement>

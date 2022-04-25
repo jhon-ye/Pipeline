@@ -23,6 +23,7 @@
         <common.model.version>1.0.0-SNAPSHOT</common.model.version>
         <pipeline.bizmapping.version>1.0.0-SNAPSHOT</pipeline.bizmapping.version>
         <pipeline.common.version>1.0.0-SNAPSHOT</pipeline.common.version>
+        <pipeline.pluginmapping.version>1.0.0-SNAPSHOT</pipeline.pluginmapping.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
     </properties>
 
@@ -79,6 +80,12 @@
                 <groupId>com.opencn.mesh</groupId>
                 <artifactId>pipeline-common</artifactId>
                 <version>${pipeline.common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.opencn.mesh</groupId>
+                <artifactId>pipeline-plugin-mapping</artifactId>
+                <version>${pipeline.pluginmapping.version}</version>
             </dependency>
 
         </dependencies>
