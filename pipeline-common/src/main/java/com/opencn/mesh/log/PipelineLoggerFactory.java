@@ -1,1 +1,55 @@
-package com.opencn.mesh.log;import com.alipay.sofa.common.log.LoggerSpaceManager;import com.opencn.mesh.util.StringUtils;import org.slf4j.Logger;import java.io.File;public class PipelineLoggerFactory {    public static final String  PIPELINE_LOG_SPACE_PROPERTY   = "pipeline.log.space";    private static String       PIPELINE_LOG_SPACE            = "com.opencn.mesh";    private static final String LOG_PATH                  = "logging.path";    private static final String LOG_PATH_DEFAULT          = System.getProperty("user.home")            + File.separator + "logs";    private static final String CLIENT_LOG_LEVEL          = "com.opencn.mesh.pipeline.log.level";    private static final String CLIENT_LOG_LEVEL_DEFAULT  = "INFO";    private static final String CLIENT_LOG_ENCODE         = "com.opencn.mesh.pipeline.log.encode";    private static final String COMMON_ENCODE             = "file.encoding";    private static final String CLIENT_LOG_ENCODE_DEFAULT = "UTF-8";    static {        String logSpace = System.getProperty(PIPELINE_LOG_SPACE_PROPERTY);        if (null != logSpace && !logSpace.isEmpty()) {            PIPELINE_LOG_SPACE = logSpace;        }        String logPath = System.getProperty(LOG_PATH);        if (StringUtils.isBlank(logPath)) {            System.setProperty(LOG_PATH, LOG_PATH_DEFAULT);        }        String logLevel = System.getProperty(CLIENT_LOG_LEVEL);        if (StringUtils.isBlank(logLevel)) {            System.setProperty(CLIENT_LOG_LEVEL, CLIENT_LOG_LEVEL_DEFAULT);        }        String commonEncode = System.getProperty(COMMON_ENCODE);        if (StringUtils.isNotBlank(commonEncode)) {            System.setProperty(CLIENT_LOG_ENCODE, commonEncode);        } else {            String logEncode = System.getProperty(CLIENT_LOG_ENCODE);            if (StringUtils.isBlank(logEncode)) {                System.setProperty(CLIENT_LOG_ENCODE, CLIENT_LOG_ENCODE_DEFAULT);            }        }    }    public static Logger getLogger(Class<?> clazz) {        if (clazz == null) {            return getLogger("");        }        return getLogger(clazz.getCanonicalName());    }    public static Logger getLogger(String name) {        if (name == null || name.isEmpty()) {            return LoggerSpaceManager.getLoggerBySpace("", PIPELINE_LOG_SPACE);        }        return LoggerSpaceManager.getLoggerBySpace(name, PIPELINE_LOG_SPACE);    }}
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.opencn.mesh.log;
+
+import com.alipay.sofa.common.log.LoggerSpaceManager;
+import org.slf4j.Logger;
+
+/**
+ * @author xuanbei 18/2/28
+ */
+public class PipelineLoggerFactory {
+    /***
+     * sofa runtime log space
+     */
+    public static final String PIPELINE_LOG_SPACE = "com.opencn.mesh";
+
+    /**
+     * get Logger Object
+     *
+     * @param name name of the logger
+     * @return Logger Object
+     */
+    public static Logger getLogger(String name) {
+        if (name == null || name.isEmpty()) {
+            return null;
+        }
+        return LoggerSpaceManager.getLoggerBySpace(name, PIPELINE_LOG_SPACE);
+    }
+
+    /**
+     * get Logger Object
+     * @param clazz the returned logger will be named after clazz
+     * @return Logger Object
+     */
+    public static Logger getLogger(Class<?> clazz) {
+        if (clazz == null) {
+            return null;
+        }
+        return getLogger(clazz.getCanonicalName());
+    }
+}
