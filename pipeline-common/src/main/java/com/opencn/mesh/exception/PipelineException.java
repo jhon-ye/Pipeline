@@ -1,0 +1,1 @@
+package com.opencn.mesh.exception;public class PipelineException extends RuntimeException {    public PipelineException(String message, Throwable cause) {        super(message, cause);    }    public PipelineException(Throwable cause) {        super(cause);    }    public PipelineException(String message) {        super(message);    }}
