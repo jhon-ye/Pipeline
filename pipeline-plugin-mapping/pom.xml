@@ -27,6 +27,12 @@
             <groupId>com.opencn.mesh</groupId>
             <artifactId>pipeline-common</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <properties>
