@@ -134,7 +134,6 @@
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>sofa-ark-all</artifactId>
-            <version>${sofa.ark.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>ch.qos.logback</groupId>
@@ -149,7 +148,6 @@
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>sofa-ark-api</artifactId>
-            <version>${sofa.ark.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>logback-classic</artifactId>
