@@ -15,6 +15,10 @@
             <groupId>com.opencn.mesh</groupId>
             <artifactId>common-model</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.opencn.mesh</groupId>
+            <artifactId>pipeline-plugin-mapping</artifactId>
+        </dependency>
     </dependencies>
 
     <properties>
