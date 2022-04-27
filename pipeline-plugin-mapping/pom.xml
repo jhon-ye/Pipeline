@@ -33,6 +33,16 @@
             <artifactId>sofa-ark-api</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.opencn.mesh</groupId>
+            <artifactId>common-model</artifactId>
+        </dependency>
     </dependencies>
 
     <properties>
