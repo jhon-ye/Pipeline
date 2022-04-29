@@ -195,7 +195,6 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>com.yunlsp</groupId>
             <artifactId>monitor</artifactId>
