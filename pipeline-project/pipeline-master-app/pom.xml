@@ -11,11 +11,6 @@
 
     <artifactId>pipeline-master-app</artifactId>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
-
     <dependencies>
 
         <!-- Pipeline master biz dependency   -->
@@ -200,6 +195,7 @@
             <artifactId>monitor</artifactId>
             <version>1.0.0-RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>com.opencn.mesh</groupId>
             <artifactId>pipeline-common</artifactId>

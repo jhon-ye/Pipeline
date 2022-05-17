@@ -17,9 +17,22 @@
             <artifactId>spring-beans</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>runtime-sofa-boot</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>rpc-sofa-boot</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -41,7 +54,7 @@
 
         <dependency>
             <groupId>com.opencn.mesh</groupId>
-            <artifactId>common-model</artifactId>
+            <artifactId>common-service</artifactId>
         </dependency>
     </dependencies>
 
