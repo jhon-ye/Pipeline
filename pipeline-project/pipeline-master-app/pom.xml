@@ -206,27 +206,6 @@
     <build>
         <finalName>pipeline-master-app</finalName>
         <plugins>
-            <!-- 这里配置动态模块打包插件 -->
-<!--            <plugin>-->
-<!--                <groupId>com.alipay.sofa</groupId>-->
-<!--                <artifactId>sofa-ark-maven-plugin</artifactId>-->
-<!--                <version>${sofa.ark.version}</version>-->
-<!--                <configuration>-->
-<!--                    <outputDirectory>target</outputDirectory>-->
-<!--                    <skipArkExecutable>true</skipArkExecutable>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>package</id>-->
-<!--                        <goals>-->
-<!--                            <goal>repackage</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-
-
-
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
