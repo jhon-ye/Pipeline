@@ -5,22 +5,22 @@
     <parent>
         <groupId>com.alipay.sofa</groupId>
         <artifactId>sofaboot-dependencies</artifactId>
-        <version>3.12.1</version>
+        <version>3.12.2-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.opencn.mesh</groupId>
     <artifactId>pipeline-all</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Pipeline Master App</name>
 
     <properties>
-        <revision>1.0.0</revision>
+        <revision>1.0.1-SNAPSHOT</revision>
         <pipeline.version>${revision}</pipeline.version>
-        <common.service.version>1.0.0</common.service.version>
-        <common.model.version>1.0.0</common.model.version>
+        <common.service.version>1.0.1-SNAPSHOT</common.service.version>
+        <common.model.version>1.0.1-SNAPSHOT</common.model.version>
     </properties>
 
     <modules>
