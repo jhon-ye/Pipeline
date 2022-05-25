@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <sofaboot.version>3.12.2-SNAPSHOT</sofaboot.version>
+        <sofaboot.version>3.12.1</sofaboot.version>
         <mybatis.version>2.2.0</mybatis.version>
         <rocketmq.starter.version>2.2.0</rocketmq.starter.version>
         <redission.strater.version>3.17.0</redission.strater.version>
@@ -24,6 +24,7 @@
         <pipeline.bizmapping.version>1.0.1-SNAPSHOT</pipeline.bizmapping.version>
         <pipeline.common.version>1.0.1-SNAPSHOT</pipeline.common.version>
         <pipeline.pluginmapping.version>1.0.1-SNAPSHOT</pipeline.pluginmapping.version>
+        <apollo.client.version>2021.0401.BUILD-SNAPSHOT</apollo.client.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
         <nacos.version>1.1.4</nacos.version>
     </properties>
@@ -94,6 +95,13 @@
                 <artifactId>nacos-all</artifactId>
                 <version>${nacos.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>xyz.vopen.framework</groupId>
+                <artifactId>mixmicro-apollo-client</artifactId>
+                <version>${apollo.client.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
