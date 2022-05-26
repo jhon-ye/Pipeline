@@ -8,10 +8,18 @@
         <version>1.0.1-SNAPSHOT</version>
         <relativePath>../pipeline-bom</relativePath>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pipeline-plugin-mapping</artifactId>
+    <artifactId>pipeline-plugin-scheduler</artifactId>
+
     <dependencies>
+        <dependency>
+            <groupId>xyz.vopen.framework</groupId>
+            <artifactId>mixmicro-apollo-client</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
@@ -25,20 +33,15 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alipay.sofa</groupId>
-            <artifactId>runtime-sofa-boot</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>com.alipay.sofa</groupId>
-            <artifactId>rpc-sofa-boot</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.opencn.mesh</groupId>
-            <artifactId>pipeline-common</artifactId>
         </dependency>
 
         <dependency>
@@ -48,13 +51,11 @@
         </dependency>
 
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
+            <groupId>com.opencn.mesh</groupId>
+            <artifactId>pipeline-common</artifactId>
+            <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.opencn.mesh</groupId>
-            <artifactId>common-service</artifactId>
-        </dependency>
+
     </dependencies>
 </project>
