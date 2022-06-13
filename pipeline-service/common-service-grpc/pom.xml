@@ -12,72 +12,74 @@
 
     <artifactId>common-service-grpc</artifactId>
 
-
-
-
     <properties>
-        <protoc.version>3.11.0</protoc.version>
-        <protoc-gen-grpc-java.version>1.17.0</protoc-gen-grpc-java.version>
-        <sofa.rpc.compiler.version>0.0.3</sofa.rpc.compiler.version>
-        <grpc.version>1.33.0</grpc.version>
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <io.grpc.version>1.23.0</io.grpc.version>
+        <os-maven-plugin.version>1.5.0.Final</os-maven-plugin.version>
+        <protobuf-maven-plugin.version>0.5.1</protobuf-maven-plugin.version>
+        <grpc-starter-version>3.4.1</grpc-starter-version>
     </properties>
 
     <dependencies>
-            <!-- grpc  -->
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-netty-shaded</artifactId>
-                <version>${grpc.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-protobuf</artifactId>
-                <version>${grpc.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-stub</artifactId>
-                <version>${grpc.version}</version>
-            </dependency>
+        <dependency>
+            <groupId>io.github.lognet</groupId>
+            <artifactId>grpc-spring-boot-starter</artifactId>
+            <version>3.4.1</version>
+        </dependency>
 
-            <!-- dependencies for protobuf -->
-            <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-java</artifactId>
-            </dependency>
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>runtime-sofa-boot</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.opencn.mesh</groupId>
+            <artifactId>common-service</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>rpc-sofa-boot</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.opencn.mesh</groupId>
+            <artifactId>common-model</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.opencn.mesh</groupId>
+            <artifactId>pipeline-common</artifactId>
+        </dependency>
     </dependencies>
 
+
     <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <!-- grpc  -->
         <extensions>
             <extension>
                 <groupId>kr.motd.maven</groupId>
                 <artifactId>os-maven-plugin</artifactId>
-                <version>1.6.1</version>
+                <version>${os-maven-plugin.version}</version>
             </extension>
         </extensions>
+
         <plugins>
-            <!-- grpc -->
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
-                <version>0.5.1</version>
+                <version>${protobuf-maven-plugin.version}</version>
                 <configuration>
-                    <protocArtifact>com.google.protobuf:protoc:3.7.1:exe:${os.detected.classifier}</protocArtifact>
+                    <protocArtifact>com.google.protobuf:protoc:3.9.1:exe:${os.detected.classifier}</protocArtifact>
                     <pluginId>grpc-java</pluginId>
-                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:${protoc-gen-grpc-java.version}:exe:${os.detected.classifier}</pluginArtifact>
-                    <outputDirectory>build/generated/source/proto/main/java</outputDirectory>
-                    <clearOutputDirectory>false</clearOutputDirectory>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.23.0:exe:${os.detected.classifier}</pluginArtifact>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>compile</goal>
                             <goal>compile-custom</goal>
-                            <goal>test-compile</goal>
-                            <goal>test-compile-custom</goal>
                         </goals>
                     </execution>
                 </executions>

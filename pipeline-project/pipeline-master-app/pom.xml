@@ -211,6 +211,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.opencn.mesh</groupId>
+            <artifactId>common-service-grpc</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.yunlsp</groupId>
             <artifactId>monitor</artifactId>
             <version>1.0.0-RELEASE</version>
