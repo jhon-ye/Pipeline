@@ -25,34 +25,6 @@
             <artifactId>grpc-spring-boot-starter</artifactId>
             <version>3.4.1</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.alipay.sofa</groupId>
-            <artifactId>runtime-sofa-boot</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.opencn.mesh</groupId>
-            <artifactId>common-service</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alipay.sofa</groupId>
-            <artifactId>rpc-sofa-boot</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.opencn.mesh</groupId>
-            <artifactId>common-model</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.opencn.mesh</groupId>
-            <artifactId>pipeline-common</artifactId>
-        </dependency>
     </dependencies>
 
 
