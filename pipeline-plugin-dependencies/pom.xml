@@ -26,9 +26,7 @@
         <pipeline.pluginmapping.version>1.0.1-SNAPSHOT</pipeline.pluginmapping.version>
         <apollo.client.version>2021.0401.BUILD-SNAPSHOT</apollo.client.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
-        <nacos.version>1.1.4</nacos.version>
-        <spring.cloud.openfeign.version>3.1.3</spring.cloud.openfeign.version>
-        <spring.cloud.nacos.discovery.version>2021.1</spring.cloud.nacos.discovery.version>
+        <nacos.version>1.4.1</nacos.version>
     </properties>
 
     <dependencyManagement>
@@ -60,19 +58,6 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redission.strater.version}</version>
-            </dependency>
-
-            <!--openfeign -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${spring.cloud.openfeign.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>${spring.cloud.nacos.discovery.version}</version>
             </dependency>
 
             <!-- grpc -->
