@@ -7,7 +7,7 @@
     <!-- 默认的控制台日志输出，一般生产环境都是后台启动，这个没太大作用 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]  %logger{50} - %msg%n</Pattern>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %-5level [%thread] %logger{50} - %msg%n</Pattern>
         </encoder>
     </appender>
     <!-- 错误日志记录 ： 按照每天生成日志文件 -->
@@ -61,6 +61,14 @@
         <appender-ref ref="ROOT-APPENDER"/>
         <appender-ref ref="ERROR-APPENDER"/>
     </logger>
+
+
+    <logger name="com.opencn.mesh" level="${logging.level.com.opencn.mesh}" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ROOT-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
 
     <root level="${logging.level}">
         <appender-ref ref="STDOUT"/>

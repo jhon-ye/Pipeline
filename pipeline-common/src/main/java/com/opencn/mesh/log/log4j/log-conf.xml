@@ -23,7 +23,7 @@
     <appender name="ERROR-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="file" value="${logging.path}/pipeline/common-error.log"/>
         <param name="append" value="true"/>
-        <param name="encoding" value="${file.encoding}"/>
+        <param name="encoding" value="UTF-8"/>
         <param name="threshold" value="error"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d %-5p %-32t - %m%n"/>
@@ -33,7 +33,7 @@
     <appender name="SOFA-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="file" value="${logging.path}/pipeline/common-default.log"/>
         <param name="append" value="true"/>
-        <param name="encoding" value="${file.encoding}"/>
+        <param name="encoding" value="UTF-8"/>
         <param name="threshold" value="${logging.level.com.opencn.mesh}"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d %-5p %-32t %c - %m%n"/>
@@ -42,12 +42,14 @@
 
     <logger name="com.alipay.sofa" additivity="false">
         <level value="${logging.level.com.opencn.mesh}"/>
+        <appender-ref ref="STDOUT"/>
         <appender-ref ref="SOFA-APPENDER"/>
         <appender-ref ref="ERROR-APPENDER"/>
     </logger>
 
     <root>
         <level value="${logging.level.com.opencn.mesh}"/>
+        <appender-ref ref="STDOUT"/>
         <appender-ref ref="SOFA-APPENDER"/>
         <appender-ref ref="ERROR-APPENDER"/>
     </root>

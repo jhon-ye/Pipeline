@@ -16,17 +16,30 @@
  */
 package com.opencn.mesh.log;
 
-import com.alipay.sofa.common.log.LoggerSpaceManager;
+import com.alipay.sofa.common.log.MultiAppLoggerSpaceManager;
 import org.slf4j.Logger;
 
-/**
- * @author xuanbei 18/2/28
- */
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class PipelineLoggerFactory {
+
     /***
-     * sofa runtime log space
+     * pipeline log space
      */
     public static final String PIPELINE_LOG_SPACE = "com.opencn.mesh";
+
+    static {
+        // Note: this step is important, as in Ark environment your SDK may be used in module dependency
+        // and will be initialized multiple times.
+        if (!MultiAppLoggerSpaceManager.isSpaceInitialized(PIPELINE_LOG_SPACE)) {
+            Map spaceIdProperties = new HashMap<String, String>();
+            // Initialize your parameters here
+            MultiAppLoggerSpaceManager.init(PIPELINE_LOG_SPACE, spaceIdProperties);
+        }
+    }
+
 
     /**
      * get Logger Object
@@ -38,7 +51,7 @@ public class PipelineLoggerFactory {
         if (name == null || name.isEmpty()) {
             return null;
         }
-        return LoggerSpaceManager.getLoggerBySpace(name, PIPELINE_LOG_SPACE);
+        return MultiAppLoggerSpaceManager.getLoggerBySpace(name, PIPELINE_LOG_SPACE);
     }
 
     /**

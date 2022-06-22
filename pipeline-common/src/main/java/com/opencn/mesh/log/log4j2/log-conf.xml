@@ -24,6 +24,7 @@
     </Properties>
 
     <appenders>
+
         <RollingFile name="ERROR-APPENDER" fileName="${RUNTIME_LOG_PATH}/pipeline/common-error.log" append="true"
                      filePattern="${RUNTIME_LOG_PATH}/pipeline/common-error.log.%d{yyyy-MM-dd}">
             <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
@@ -49,11 +50,13 @@
 
     <loggers>
         <logger name="com.opencn.mesh" level="${RUNTIME_LOG_LEVEL}" additivity="false">
+            <appender-ref ref="STDOUT"/>
             <appender-ref ref="SOFA-APPENDER"/>
             <appender-ref ref="ERROR-APPENDER"/>
         </logger>
 
         <root level="${RUNTIME_LOG_LEVEL}" additivity="false">
+            <appender-ref ref="STDOUT"/>
             <appender-ref ref="SOFA-APPENDER"/>
             <appender-ref ref="ERROR-APPENDER"/>
         </root>
