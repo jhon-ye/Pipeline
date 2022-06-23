@@ -5,7 +5,7 @@
     <parent>
         <artifactId>pipeline-all</artifactId>
         <groupId>com.opencn.mesh</groupId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.1.1-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -15,15 +15,15 @@
     <packaging>pom</packaging>
 
     <properties>
-        <sofaboot.version>3.12.2</sofaboot.version>
+        <sofaboot.version>3.12.3-SNAPSHOT</sofaboot.version>
         <mybatis.version>2.2.0</mybatis.version>
         <rocketmq.starter.version>2.2.0</rocketmq.starter.version>
         <redission.strater.version>3.17.0</redission.strater.version>
-        <common.service.version>1.0.1-SNAPSHOT</common.service.version>
-        <common.model.version>1.0.1-SNAPSHOT</common.model.version>
-        <pipeline.bizmapping.version>1.0.1-SNAPSHOT</pipeline.bizmapping.version>
-        <pipeline.common.version>1.0.1-SNAPSHOT</pipeline.common.version>
-        <pipeline.pluginmapping.version>1.0.1-SNAPSHOT</pipeline.pluginmapping.version>
+        <common.service.version>1.1.1-SNAPSHOT</common.service.version>
+        <common.model.version>1.1.1-SNAPSHOT</common.model.version>
+        <pipeline.bizmapping.version>1.1.1-SNAPSHOT</pipeline.bizmapping.version>
+        <pipeline.common.version>1.1.1-SNAPSHOT</pipeline.common.version>
+        <pipeline.pluginmapping.version>1.1.1-SNAPSHOT</pipeline.pluginmapping.version>
         <apollo.client.version>2021.0401.BUILD-SNAPSHOT</apollo.client.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
         <nacos.version>1.4.1</nacos.version>

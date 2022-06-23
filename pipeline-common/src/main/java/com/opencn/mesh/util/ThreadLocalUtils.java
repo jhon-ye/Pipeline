@@ -1,0 +1,1 @@
+package com.opencn.mesh.util;public class ThreadLocalUtils {    private final static ThreadLocal<Object> THREAD_LOCAL = new ThreadLocal<>();    public static void set(Object o){        THREAD_LOCAL.set(o);    }    public static Object get( ){        return THREAD_LOCAL.get();    }    public static void remove() {        THREAD_LOCAL.remove();    }}

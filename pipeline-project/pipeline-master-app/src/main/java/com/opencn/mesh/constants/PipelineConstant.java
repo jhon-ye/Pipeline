@@ -1,0 +1,1 @@
+package com.opencn.mesh.constants;public interface PipelineConstant {    String BIZ_IDENTIFY = "biz-identify";    String BIZ_KEY = "biz-key";}
