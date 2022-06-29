@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <sofaboot.version>3.12.3</sofaboot.version>
+        <sofaboot.version>3.12.4</sofaboot.version>
         <mybatis.version>2.2.0</mybatis.version>
         <rocketmq.starter.version>2.2.0</rocketmq.starter.version>
         <redission.strater.version>3.17.0</redission.strater.version>
