@@ -19,13 +19,12 @@
 <configuration>
 
     <property resource="application.properties" />
-
     <appender name="ERROR-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>error</level>
         </filter>
-        <file>${logging.path}/${spring.application.name}/common-error.log</file>
+        <file>${logging.file.path}/${spring.application.name}/common-error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>${logging.path}/${spring.application.name}/common-error.log.%d{yyyy-MM-dd}</FileNamePattern>
             <MaxHistory>30</MaxHistory>
@@ -41,7 +40,7 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>${logging.level.com.opencn.mesh}</level>
         </filter>
-        <file>${logging.path}/${spring.application.name}/common-default.log</file>
+        <file>${logging.file.path}/${spring.application.name}/common-default.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>${logging.path}/${spring.application.name}/common-default.log.%d{yyyy-MM-dd}</FileNamePattern>
             <MaxHistory>30</MaxHistory>
@@ -51,11 +50,6 @@
             <charset>${file.encoding}</charset>
         </encoder>
     </appender>
-
-    <logger name="com.opencn.mesh" level="${logging.level.com.opencn.mesh}" additivity="false">
-        <appender-ref ref="SOFA-APPENDER"/>
-        <appender-ref ref="ERROR-APPENDER"/>
-    </logger>
 
     <root level="${logging.level.com.opencn.mesh}">
         <appender-ref ref="SOFA-APPENDER"/>
