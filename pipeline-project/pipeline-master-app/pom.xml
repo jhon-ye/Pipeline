@@ -47,6 +47,11 @@
             <artifactId>rpc-sofa-boot-starter</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>log-sofa-boot-starter</artifactId>
+        </dependency>
+
 <!--        <dependency>-->
 <!--            <groupId>com.alipay.sofa</groupId>-->
 <!--            <artifactId>dashboard-client-sofa-boot-starter</artifactId>-->
@@ -89,11 +94,6 @@
             <artifactId>fastjson</artifactId>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.alipay.sofa</groupId>
-            <artifactId>log-sofa-boot-starter</artifactId>
-        </dependency>
 
         <!-- 这里添加动态模块相关依赖 -->
         <dependency>
