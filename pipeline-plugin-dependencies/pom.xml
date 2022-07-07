@@ -5,7 +5,7 @@
     <parent>
         <artifactId>pipeline-all</artifactId>
         <groupId>com.opencn.mesh</groupId>
-        <version>1.1.1-SNAPSHOT</version>
+        <version>1.1.1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -19,15 +19,37 @@
         <mybatis.version>2.2.0</mybatis.version>
         <rocketmq.starter.version>2.2.0</rocketmq.starter.version>
         <redission.strater.version>3.17.0</redission.strater.version>
-        <common.service.version>1.1.1-SNAPSHOT</common.service.version>
-        <common.model.version>1.1.1-SNAPSHOT</common.model.version>
-        <pipeline.bizmapping.version>1.1.1-SNAPSHOT</pipeline.bizmapping.version>
-        <pipeline.common.version>1.1.1-SNAPSHOT</pipeline.common.version>
-        <pipeline.pluginmapping.version>1.1.1-SNAPSHOT</pipeline.pluginmapping.version>
+        <common.service.version>1.1.1</common.service.version>
+        <common.model.version>1.1.1</common.model.version>
+        <pipeline.bizmapping.version>1.1.1</pipeline.bizmapping.version>
+        <pipeline.common.version>1.1.1</pipeline.common.version>
+        <pipeline.pluginmapping.version>1.1.1</pipeline.pluginmapping.version>
         <apollo.client.version>2021.0401.BUILD-SNAPSHOT</apollo.client.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
         <nacos.version>1.4.1</nacos.version>
     </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.alipay.sofa</groupId>
+                    <artifactId>sofa-ark-maven-plugin</artifactId>
+                    <version>${sofa.ark.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.alipay.sofa</groupId>
+                    <artifactId>sofa-ark-plugin-maven-plugin</artifactId>
+                    <version>${sofa.ark.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>flatten-maven-plugin</artifactId>
+                    <version>${flatten-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
     <dependencyManagement>
         <dependencies>
@@ -102,10 +124,9 @@
                 <artifactId>mixmicro-apollo-client</artifactId>
                 <version>${apollo.client.version}</version>
             </dependency>
-
-
-
         </dependencies>
     </dependencyManagement>
+
+
 
 </project>

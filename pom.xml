@@ -12,15 +12,15 @@
 
     <groupId>com.opencn.mesh</groupId>
     <artifactId>pipeline-all</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1</version>
     <packaging>pom</packaging>
     <name>Pipeline Master App</name>
 
     <properties>
-        <revision>1.1.1-SNAPSHOT</revision>
+        <revision>1.1.1</revision>
         <pipeline.version>${revision}</pipeline.version>
-        <common.service.version>1.1.1-SNAPSHOT</common.service.version>
-        <common.model.version>1.1.1-SNAPSHOT</common.model.version>
+        <common.service.version>1.1.1</common.service.version>
+        <common.model.version>1.1.1</common.model.version>
     </properties>
 
     <modules>
