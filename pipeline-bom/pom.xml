@@ -5,7 +5,7 @@
     <parent>
         <artifactId>pipeline-plugin-dependencies</artifactId>
         <groupId>com.opencn.mesh</groupId>
-        <version>1.1.1</version>
+        <version>1.1.2</version>
         <relativePath>../pipeline-plugin-dependencies</relativePath>
     </parent>
 
@@ -16,8 +16,8 @@
 
     <properties>
         <sofa.jarslink.version>2.0.0-SNAPSHOT</sofa.jarslink.version>
-        <pipeline.service.version>1.1.1</pipeline.service.version>
-        <pipeline.schduler.version>1.1.1</pipeline.schduler.version>
+        <pipeline.service.version>1.1.2</pipeline.service.version>
+        <pipeline.schduler.version>1.1.2</pipeline.schduler.version>
         <sofa.dashboard.client.version>1.1.1-SNAPSHOT</sofa.dashboard.client.version>
         <lombok.version>1.18.22</lombok.version>
         <gson.version>2.8.6</gson.version>
