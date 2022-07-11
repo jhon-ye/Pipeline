@@ -5,7 +5,6 @@
     <property scope="local" name="LOG_HOME" value="${logging.path.com.opencn.mesh}"/>
     <property scope="local" name="LOG_LEVEL" value="${logging.level.com.opencn.mesh}"/>
     <property scope="local" name="LOG_ENCODE" value="UTF-8"/>
-    <contextName>${HOSTNAME}</contextName>
 
     <!-- appenders -->
     <appender name="CommonDefaultAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -26,7 +25,7 @@
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%contextName %d %-5p [%C{0}#%L] [%t] %m%n</pattern>
+            <pattern>%d %-5p [%C{0}#%L] [%t] %m%n</pattern>
             <charset>${LOG_ENCODE}</charset>
         </encoder>
     </appender>
@@ -44,14 +43,14 @@
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%contextName %d %-5p [%C{0}#%L] [%t] %m%n</pattern>
+            <pattern>%d %-5p [%C{0}#%L] [%t] %m%n</pattern>
             <charset>${LOG_ENCODE}</charset>
         </encoder>
     </appender>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%contextName %d %-5p [%C{0}#%L] [%t] %m%n</pattern>
+            <pattern>%d %-5p [%C{0}#%L] [%t] %m%n</pattern>
             <charset>${LOG_ENCODE}</charset>
         </encoder>
     </appender>
