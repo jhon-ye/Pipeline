@@ -1,62 +1,11 @@
+# 这个是模版 -- 不需要修改 --当前模版用作单项目单个服务
+include:
+  - project: 'cncf/gitlab-ci-template'
+    ref: master
+    file: 'template/backend-java-v2.yaml'
+# 这个项目的环境变量--要自己修改为自己项目对应的
 variables:
-  HARBOR: "harbor.hgj.net/next-yunlsp"
-  TENCENTYUN: "ccr.ccs.tencentyun.com/next-yunlsp"
-stages:
-  - deploy
-deploy-dev:
-  stage: deploy
-  environment:
-    name: dev
-  script:
-    - mvn clean -U package -Dmaven.test.skip=true
-    - docker build -t $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
-    - docker push $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
-  tags:
-    - shell
-  when: manual
-  only:
-    - /^feature.*$/
-    - /^bugfix.*$/
-    - /^dev.*$/
-deploy-beta:
-  stage: deploy
-  environment:
-    name: dev
-  script:
-    - mvn clean -U package -Dmaven.test.skip=true
-    - docker build -t $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
-    - docker push $HARBOR/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
-  tags:
-    - shell
-  when: manual
-  only:
-    - /^feature.*$/
-    - /^bugfix.*$/
-    - /^dev.*$/
-deploy-uat:
-  stage: deploy
-  environment:
-    name: uat
-  script:
-    - mvn clean -U package -Dmaven.test.skip=true
-    - docker build -t ccr.ccs.tencentyun.com/uat-next-yunlsp/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
-    - docker push ccr.ccs.tencentyun.com/uat-next-yunlsp/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
-  tags:
-    - txshell
-  when: manual
-  only:
-    - /^feature.*$/
-    - /^bugfix.*$/
-    - /^dev.*$/
-deploy-prod:
-  stage: deploy
-  script:
-    - mvn clean -U package -Dmaven.test.skip=true
-    - docker build -t $TENCENTYUN/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG} .
-    - docker push $TENCENTYUN/${CI_PROJECT_NAME}:${CI_COMMIT_REF_SLUG}
-  tags:
-    - txshell
-  when: manual
-  only:
-    - /^release.*$/
-    - /^hotfix.*$/
+  # 【修改】这个是服务名称
+  APP_NAME: pipeline-master-app
+  # 【修改】这个是要发布的jar包的路径
+  ARTIFACT_PATH: pipeline-project/pipeline-master-app/target/pipeline-master-app-ark-biz.jar
