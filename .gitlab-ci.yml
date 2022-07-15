@@ -1,11 +1,7 @@
-# 这个是模版 -- 不需要修改 --当前模版用作单项目单个服务
 include:
   - project: 'cncf/gitlab-ci-template'
     ref: master
     file: 'template/backend-java-v2.yaml'
-# 这个项目的环境变量--要自己修改为自己项目对应的
 variables:
-  # 【修改】这个是服务名称
   APP_NAME: pipeline-master-app
-  # 【修改】这个是要发布的jar包的路径
   ARTIFACT_PATH: pipeline-project/pipeline-master-app/target/pipeline-master-app-ark-biz.jar
