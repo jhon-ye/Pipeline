@@ -5,7 +5,7 @@
     <parent>
         <artifactId>pipeline-all</artifactId>
         <groupId>com.opencn.mesh</groupId>
-        <version>1.1.2</version>
+        <version>${revision}</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -19,11 +19,6 @@
         <mybatis.version>2.2.0</mybatis.version>
         <rocketmq.starter.version>2.2.0</rocketmq.starter.version>
         <redission.strater.version>3.17.0</redission.strater.version>
-        <common.service.version>1.1.2</common.service.version>
-        <common.model.version>1.1.2</common.model.version>
-        <pipeline.bizmapping.version>1.1.2</pipeline.bizmapping.version>
-        <pipeline.common.version>1.1.2</pipeline.common.version>
-        <pipeline.pluginmapping.version>1.1.2</pipeline.pluginmapping.version>
         <apollo.client.version>2021.0401.BUILD-SNAPSHOT</apollo.client.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
         <nacos.version>1.4.1</nacos.version>
@@ -92,25 +87,25 @@
             <dependency>
                 <groupId>com.opencn.mesh</groupId>
                 <artifactId>common-model</artifactId>
-                <version>${common.model.version}</version>
+                <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.opencn.mesh</groupId>
                 <artifactId>common-service</artifactId>
-                <version>${common.service.version}</version>
+                <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.opencn.mesh</groupId>
                 <artifactId>pipeline-common</artifactId>
-                <version>${pipeline.common.version}</version>
+                <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.opencn.mesh</groupId>
                 <artifactId>pipeline-plugin-mapping</artifactId>
-                <version>${pipeline.pluginmapping.version}</version>
+                <version>${revision}</version>
             </dependency>
 
             <dependency>
