@@ -101,6 +101,18 @@
             <artifactId>web-ark-plugin</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>runtime-sofa-boot-plugin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>rpc-sofa-boot-plugin</artifactId>
+        </dependency>
+
+
+
 <!--        <dependency>-->
 <!--            <groupId>com.alipay.sofa</groupId>-->
 <!--            <artifactId>config-ark-plugin</artifactId>-->
