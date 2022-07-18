@@ -48,6 +48,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.msgpack</groupId>
+            <artifactId>msgpack</artifactId>
+            <version>0.6.12</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>log-sofa-boot-starter</artifactId>
         </dependency>
