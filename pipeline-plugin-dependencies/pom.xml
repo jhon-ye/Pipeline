@@ -21,7 +21,7 @@
         <redission.strater.version>3.17.0</redission.strater.version>
         <apollo.client.version>2022.0401.RELEASE</apollo.client.version>
         <grpc.starter.version>2.12.0.RELEASE</grpc.starter.version>
-        <nacos.version>1.4.1</nacos.version>
+        <nacos.version>1.4.2</nacos.version>
     </properties>
 
     <build>
