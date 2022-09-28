@@ -1,2 +1,0 @@
-2022-09-20 14:17:30,158 ERROR main  - Rejected registering request of instance com.alipay.sofa.common.thread.SofaThreadPoolExecutor@d0456ad[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] with duplicate name: sofa-boot-health-check
-2022-09-20 14:29:33,535 ERROR main  - Rejected registering request of instance com.alipay.sofa.common.thread.SofaThreadPoolExecutor@27aa0720[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] with duplicate name: sofa-boot-health-check

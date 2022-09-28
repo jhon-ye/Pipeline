@@ -1,6 +1,0 @@
-2022-09-20 14:17:31,059 INFO  main                             com.alipay.sofa.rpc.registry.nacos.NacosRegistry - RPC-010000003: RPC 服务[com.opencn.mesh.service.BizCommonService:manifest-qingd-plugin:1.0.0:DEFAULT]发布开始 
-2022-09-20 14:17:31,162 INFO  main                             com.alipay.sofa.rpc.registry.nacos.NacosRegistry - RPC-010000004: RPC 服务[com.opencn.mesh.service.BizCommonService:manifest-qingd-plugin:1.0.0:DEFAULT]发布结束 
-2022-09-20 14:29:00,803 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.nacos.NacosRegistry - RPC-010000002: 注销 RPC 服务：[com.opencn.mesh.service.BizCommonService:manifest-qingd-plugin:1.0.0:DEFAULT]	数量: [1] 
-2022-09-20 14:29:34,577 INFO  main                             com.alipay.sofa.rpc.registry.nacos.NacosRegistry - RPC-010000003: RPC 服务[com.opencn.mesh.service.BizCommonService:manifest-qingd-plugin:1.0.0:DEFAULT]发布开始 
-2022-09-20 14:29:34,755 INFO  main                             com.alipay.sofa.rpc.registry.nacos.NacosRegistry - RPC-010000004: RPC 服务[com.opencn.mesh.service.BizCommonService:manifest-qingd-plugin:1.0.0:DEFAULT]发布结束 
-2022-09-20 14:35:01,282 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.nacos.NacosRegistry - RPC-010000002: 注销 RPC 服务：[com.opencn.mesh.service.BizCommonService:manifest-qingd-plugin:1.0.0:DEFAULT]	数量: [1] 
