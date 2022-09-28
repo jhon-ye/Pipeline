@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.opencn.mesh.grpc;
+
+
+message PipelineRequest {
+    string bizIdentify = 1;
+    string bizKey = 2;
+    bytes bizData = 3;
+}
+
+message PipelineResponse {
+    bool success = 1;
+    string error = 2;
+    bytes data = 3;
+}
+
+service BizCommonService {
+    rpc req(PipelineRequest) returns (PipelineResponse);
+}
+

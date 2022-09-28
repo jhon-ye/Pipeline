@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/../ctn-tracking/ctn-tracking-endpoint/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ctn-tracking/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ctn-tracking/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/biz-dependencies/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/biz-dependencies/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-bom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-bom/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-model/common-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-plugin-dependencies/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-plugin-dependencies/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-plugin-mapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-plugin-scheduler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-project/pipeline-grpc-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-project/pipeline-master-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-project/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-project/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-service/common-service-grpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-service/common-service-grpc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-service/common-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pipeline-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

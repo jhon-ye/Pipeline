@@ -1,0 +1,6 @@
+2022-09-20 14:17:29.740[INFO]  LOG_FILE_DIR is ./logs/tracelog
+2022-09-20 14:17:29.746[WARN]  rpc-client-stat.log configured stat_log_interval=60 second and default cycle=60
+2022-09-20 14:17:29.750[WARN]  rpc-server-stat.log configured stat_log_interval=60 second and default cycle=60
+2022-09-20 14:29:32.962[INFO]  LOG_FILE_DIR is ./logs/tracelog
+2022-09-20 14:29:32.968[WARN]  rpc-client-stat.log configured stat_log_interval=60 second and default cycle=60
+2022-09-20 14:29:32.973[WARN]  rpc-server-stat.log configured stat_log_interval=60 second and default cycle=60
